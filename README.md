@@ -1,4 +1,4 @@
-## Building and aligning Active Brain Atlas
+## Building and aligning the Active Brain Atlas
 #### Fetching data
 1. The data for the Active Brain Atlas is stored as two sets of numpy arrays. One set contains the actual
 numpy array volume and the other set contains the 3 x,y,z coordinates in a text file. (There is another set of STL
