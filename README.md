@@ -1,5 +1,5 @@
-### Building the Active Brain Atlas
-##### Fetching data
+## Building and aligning Active Brain Atlas
+#### Fetching data
 1. The data for the Active Brain Atlas is stored as two sets of numpy arrays. One set contains the actual
 numpy array volume and the other set contains the 3 x,y,z coordinates in a text file. (There is another set of STL
 files, but that is only for importing into 3D Slicer and that will be discussed below.)
@@ -36,7 +36,7 @@ from the instructions above.
 1. The atlas should show up as a new layer.
 
 #### Aligning the Atlas for Neuroglancer
-1. To build the atlas for neuroglancer you will also need an existing stack of images to get the centers of mass. 
+1. To align the atlas in Neuroglancer you will also need an existing stack of images to get the centers of mass. 
 This can be done by opening your stack in neuroglancer, find at least 3 structures in your stack that correspond
 to the structures found in the structures.zip file and then get the center of mass, x,y,z coordinates for those 
 structures. Copy the data into a python dictionary similar to this:
