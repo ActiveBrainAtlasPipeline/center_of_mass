@@ -18,7 +18,7 @@ files, but that is only for importing into 3D Slicer and that will be discussed 
 1. After unzipping the mesh.zip file, you will have a new directory called 'mesh'. Simply import all the stl files
 into 3D Slicer as models. It is best to choose the '3D only' layout.
 
-#### Building the Atlas and importing into Neuroglancer
+#### Building the atlas and importing into Neuroglancer
 1. You will need the structures and the origin files on your local file system. Get these files with help
 from the instructions above.
 1. Get the python scripts from this repository: `git clone git@github.com:ActiveBrainAtlasPipeline/center_of_mass.git`
@@ -35,7 +35,7 @@ from the instructions above.
 1. Open neuroglancer and in the precomputed source enter the path of the directory.
 1. The atlas should show up as a new layer.
 
-#### Aligning the Atlas for Neuroglancer
+#### Aligning the atlas for Neuroglancer
 1. To align the atlas in Neuroglancer you will also need an existing stack of images to get the centers of mass. 
 This can be done by opening your stack in neuroglancer, find at least 3 structures in your stack that correspond
 to the structures found in the structures.zip file and then get the center of mass, x,y,z coordinates for those 
