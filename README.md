@@ -11,7 +11,9 @@ files, but that is only for importing into 3D Slicer and that will be discussed 
     1. `aws s3 cp s3://mousebrainatlas-data/atlasV7/origin.zip origin.zip`
     1. `aws s3 cp s3://mousebrainatlas-data/atlasV7/structures.zip structures.zip`
     1. `aws s3 cp s3://mousebrainatlas-data/atlasV7/mesh.zip mesh.zip`
+1. If you can't get them off of AWS, use wget or curl or just type this in a web browser: https://activebrainatlas.ucsd.edu/atlasV7.tar.gz
 1. After downloading the zip files, unzip them and you will have 3 new directories containing the 51 files.
+1. If you download the tar.gz file, use `tar zxvf atlasV7.tar.gz` That will create two directories each for the origin and the structures.
 
 
 #### Building for 3D Slicer
