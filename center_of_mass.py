@@ -26,7 +26,7 @@ def get_atlas_centers(atlas_box_size=(1000, 1000, 300), atlas_box_scales=(10, 10
     atlas_box_center = atlas_box_size / 2
 
     # unzip your structure and origin zip files in this path, or create your own path
-    atlas_dir = Path('/net/birdstore/Active_Atlas_Data/data_root/atlas_data/atlasV7')
+    atlas_dir = Path('../atlasV7')
     origin_dir = atlas_dir / 'origin'
     volume_dir = atlas_dir / 'structure'
 

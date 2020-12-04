@@ -11,12 +11,12 @@ PIPELINE_ROOT = Path('.').absolute().parent
 sys.path.append(PIPELINE_ROOT.as_posix())
 from utilities_cvat_neuroglancer import get_structure_number, NumpyToNeuroglancer, get_segment_properties
 RESOLUTION = 0.325
-OUTPUT_DIR = '/net/birdstore/Active_Atlas_Data/data_root/pipeline_data/DK39/neuroglancer_data/atlas'
+OUTPUT_DIR = '../atlas_ng/'
 
 def create_atlas():
 
     # unzip your structure and origin zip files in this path, or create your own path
-    atlas_dir = Path('/net/birdstore/Active_Atlas_Data/data_root/atlas_data/atlasV7')
+    atlas_dir = Path('../atlasV7')
     origin_dir = atlas_dir / 'origin'
     volume_dir = atlas_dir / 'structure'
 
