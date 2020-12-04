@@ -5,7 +5,6 @@ import json
 
 import numpy as np
 import neuroglancer
-import tinybrain
 from taskqueue import LocalTaskQueue
 import igneous.task_creation as tc
 from cloudvolume import CloudVolume
@@ -14,56 +13,20 @@ RESOLUTION = 0.325 # change this if needed
 
 
 def get_db_structure_infos():
-    db_structures = {'10N_L': ['Dorsal nucleus of vagus nerve', 1],
-     '10N_R': ['Dorsal nucleus of vagus nerve', 1],
-     '12N': ['Hypoglossal nucleus', 2],
-     '3N_L': ['Oculomotor nucleus', 3],
-     '3N_R': ['Oculomotor nucleus', 3],
-     '4N_L': ['Trochlear nucleus', 4],
-     '4N_R': ['Trochlear nucleus', 4],
-     '5N_L': ['Trigeminal motor nucleus', 5],
-     '5N_R': ['Trigeminal motor nucleus', 5],
-     '6N_L': ['Abducens nucleus', 6],
-     '6N_R': ['Abducens nucleus', 6],
-     '7N_L': ['Facial nucleus', 7],
-     '7N_R': ['Facial nucleus', 7],
-     '7n_L': ['Facial nerve', 9],
-     '7n_R': ['Facial nerve', 9],
-     'AP': ['Area postrema', 28],
-     'Amb_L': ['Nucleus ambiggus', 8],
-     'Amb_R': ['Nucleus ambiggus', 8],
-     'DC_L': ['Dorsal cochlea nucleus', 10],
-     'DC_R': ['Dorsal cochlea nucleus', 10],
-     'IC': ['Inferior colliculus', 11],
-     'LC_L': ['Locus corelus', 12],
-     'LC_R': ['Locus corelus', 12],
-     'LRt_L': ['Lateral reticular nucleus', 13],
-     'LRt_R': ['Lateral reticular nucleus', 13],
-     'PBG_L': ['Parabigeminal nucleus', 14],
-     'PBG_R': ['Parabigeminal nucleus', 14],
-     'Pn_L': ['Pontine grey', 15],
-     'Pn_R': ['Pontine grey', 15],
-     'R': ['Red nucleus', 16],
-     'RtTg': ['Reticulotegmental nucleus', 17],
-     'SC': ['Superior colliculus', 18],
-     'SNC_L': ['Substantia niagra, compact', 19],
-     'SNC_R': ['Substantia niagra, compact', 19],
-     'SNR_L': ['Substantia niagra, reticular', 20],
-     'SNR_R': ['Substantia niagra, reticular', 20],
-     'Sp5C_L': ['Spinal-trigeminal nucleus, caudalis', 21],
-     'Sp5C_R': ['Spinal-trigeminal nucleus, caudalis', 21],
-     'Sp5I_L': ['Spinal-trigeminal nucleus, interpolaris', 22],
-     'Sp5I_R': ['Spinal-trigeminal nucleus, interpolaris', 22],
-     'Sp5O_L': ['Spinal-trigeminal nucleus, oralis', 23],
-     'Sp5O_R': ['Spinal-trigeminal nucleus, oralis', 23],
-     'Tz_L': ['Nucleus of trapezoidal body', 24],
-     'Tz_R': ['Nucleus of trapezoidal body', 24],
-     'VCA_L': ['Ventral cochlea nucleus, anterior', 25],
-     'VCA_R': ['Ventral cochlea nucleus, anterior', 25],
-     'VCP_L': ['Ventral cochlea nucleus, posterior', 26],
-     'VCP_R': ['Ventral cochlea nucleus, posterior', 26],
-     'VLL_L': ['Ventral lateral lemniscus', 27],
-     'VLL_R': ['Ventral lateral lemniscus', 27]}
+    db_structures = {'10N': ['Dorsal nucleus of vagus nerve', 1], '12N': ['Hypoglossal nucleus', 2],
+                     '3N': ['Oculomotor nucleus', 3], '4N': ['Trochlear nucleus', 4],
+                     '5N': ['Trigeminal motor nucleus', 5], '6N': ['Abducens nucleus', 6], '7N': ['Facial nucleus', 7],
+                     '7n': ['Facial nerve', 9], 'AP': ['Area postrema', 28], 'Amb': ['Nucleus ambiggus', 8],
+                     'DC': ['Dorsal cochlea nucleus', 10], 'IC': ['Inferior colliculus', 11],
+                     'LC': ['Locus corelus', 12], 'LRt': ['Lateral reticular nucleus', 13],
+                     'PBG': ['Parabigeminal nucleus', 14], 'Pn': ['Pontine grey', 15], 'R': ['Red nucleus', 16],
+                     'RtTg': ['Reticulotegmental nucleus', 17], 'SC': ['Superior colliculus', 18],
+                     'SNC': ['Substantia niagra, compact', 19], 'SNR': ['Substantia niagra, reticular', 20],
+                     'Sp5C': ['Spinal-trigeminal nucleus, caudalis', 21],
+                     'Sp5I': ['Spinal-trigeminal nucleus, interpolaris', 22],
+                     'Sp5O': ['Spinal-trigeminal nucleus, oralis', 23], 'Tz': ['Nucleus of trapezoidal body', 24],
+                     'VCA': ['Ventral cochlea nucleus, anterior', 25],
+                     'VCP': ['Ventral cochlea nucleus, posterior', 26], 'VLL': ['Ventral lateral lemniscus', 27]}
     return db_structures
 
 def get_known_foundation_structure_names():
