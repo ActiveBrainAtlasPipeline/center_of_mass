@@ -47,7 +47,8 @@ python create_atlas.py
 1. The default output directory is `atlas_ng` outside the `center_of_mass` folder.
 1. Copy that directory to location accessible by your web server.
 1. Open neuroglancer. In the source tab, input `precomputed://https:{PATH_TO_ATLAS_IN_YOUR_SERVER}`.
-1. The atlas should show up as a new layer.
+1. Click the button `Create as segmentation layer` on the bottom right corner if the layer does not show up.
+1. The atlas should show up as a new layer. (To show the volume in the 3rd quadrant, go to the `Seg.` tab on the top right corner and click the segments).
 
 #### Aligning the atlas for Neuroglancer
 1. To align the atlas in Neuroglancer you will also need an existing stack of images to get the centers of mass. 
