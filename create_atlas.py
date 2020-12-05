@@ -14,8 +14,7 @@ OUTPUT_DIR = '../atlas_ng/'
 def create_atlas():
 
     # unzip your structure and origin zip files in this path, or create your own path
-    atlas_dir = Path('/net/birdstore/Active_Atlas_Data/data_root/atlas_data/atlasV7')
-    #atlas_dir = Path('/net/birdstore/Active_Atlas_Data/copied_from_S3/mousebrainatlas-data/CSHL_volumes/atlasV7/atlasV7_10.0um_scoreVolume/score_volumes')
+    atlas_dir = Path('../atlasV7')
     origin_dir = atlas_dir / 'origin'
     volume_dir = atlas_dir / 'structure'
 
