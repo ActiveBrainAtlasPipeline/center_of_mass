@@ -37,6 +37,8 @@ git clone git@github.com:ActiveBrainAtlasPipeline/center_of_mass.git && cd cente
 # Create a virtual environment (highly recommended)
 python3 -m venv ~/.virtualenvs/center_of_mass
 source ~/.virtualenvs/center_of_mass/bin/activate
+# update pip
+pip install -U pip
 # Install required python libraries
 pip install -r requirements.txt
 # Install igneous
