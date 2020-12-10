@@ -63,8 +63,8 @@ reference_centers = {'SC':[40000, 30000, 0], '7N_R':[45000,35000, 300], '7N_L':[
 1. The origin files you download above each contain a x,y,z set of coordinates. These coordinates represent
 the distance in 10um units each structure is away from the center of a virtual 3D space. The scripts provided
 with this install will help in converting the units of the atlas to the units in your image stack.
-1. open up the file: center_of_mass.py and add your python dictionary to the main method at the bottom the file. 
+1. open up the file: `center_of_mass.py` and add your python dictionary to the main method at the bottom the file.
 1. now, simply run the program `python center_of_mass.py`
-1. The program will print out the rotation matrix and the translation vector. Copy the 3x3 rotation matrix 
-into the layer's source matrix and the vector into the layer's translation vector.
+1. The program will print out the rotation matrix and the translation vector. In the source tab of the atlas layer, change the scale of the output dimensions to`325nm, 325nm, 20µm`. Copy the 3x3 rotation matrix into the layer's source matrix and the vector into the layer's translation vector.
+    - Alternatively, you can also change the scale of the output by changing the `reference_scales` parameter in `align_atlas` function. Note that the unit of `reference_scales` is micrometer.
 1. The atlas should align with the image stack.
