@@ -14,7 +14,7 @@ OUTPUT_DIR = '../atlas_ng/'
 def create_atlas():
 
     # unzip your structure and origin zip files in this path, or create your own path
-    atlas_dir = Path('../atlasV7')
+    atlas_dir = Path('../')
     origin_dir = atlas_dir / 'origin'
     volume_dir = atlas_dir / 'structure'
 

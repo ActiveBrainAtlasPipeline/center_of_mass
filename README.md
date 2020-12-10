@@ -11,13 +11,13 @@ files, but that is only for importing into 3D Slicer and that will be discussed 
     1. `aws s3 cp s3://mousebrainatlas-data/atlasV7/origin.zip origin.zip`
     1. `aws s3 cp s3://mousebrainatlas-data/atlasV7/structures.zip structures.zip`
     1. `aws s3 cp s3://mousebrainatlas-data/atlasV7/mesh.zip mesh.zip` -->
-1. Download the Atlas data by running either of the following commands
+2. Download the Atlas data by running either of the following commands
 ```Bash
 curl https://activebrainatlas.ucsd.edu/atlasV7.tar.gz | tar -xz
 wget -O- https://activebrainatlas.ucsd.edu/atlasV7.tar.gz | tar -xz
 ```
 <!-- 1. After downloading the zip files, unzip them and you will have 3 new directories containing the 51 files. -->
-1. You should now have a directory atlasV7 with 3 sub-directories, each containing 51 files.
+3. You should now have 3 sub-directories, each containing 51 files.
     - `structures` - the set of numpy arrays
     - `origin` - the set of origin files containing the x,y,z coordinates
     - `mesh` - the set of mesh stl files for 3D Slicer
@@ -29,7 +29,7 @@ wget -O- https://activebrainatlas.ucsd.edu/atlasV7.tar.gz | tar -xz
 1. You will need the structures and the origin files on your local file system. The two folder should be in the `atlasV7` folder you just downloaded.
 1. You will need git, python3-pip and python3-venv (recommended) to run the scripts. Run the following to generate precomputed file-backed datasource for neuroglancer.
 
-Please ensure that your current folder contains the `atlasV7` folder as our script assumes that. For atlas stored elsewhere, please change `atlas_dir` variable in `create_atlas.py` and `center_of_mass.py`.
+Please ensure that your current folder contains the `origin` and `structures` folder as our script assumes that. For atlas stored elsewhere, please change `atlas_dir` variable in `create_atlas.py` and `center_of_mass.py`.
 ```Bash
 sudo apt-get install git python3-pip python3-venv
 # Clone the python scripts from this repository
