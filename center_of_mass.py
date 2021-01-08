@@ -130,7 +130,7 @@ def align_atlas(reference_centers,
 if __name__ == '__main__':
     # Replace this data with your real data you got from the centers of mass of
     # at least 3 structures from neuroglancer. The data below is our data and will most
-    # likely work with your stack!
+    # likely NOT work with your stack!
     reference_centers = {
         '12N': [46488, 18778, 242],
         '5N_L': [38990, 20019, 172],
